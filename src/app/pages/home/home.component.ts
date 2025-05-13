@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ShorturlService } from '../../api/shorturl.service';
-import { CreateShortUrl } from '../../api/models/CreateShortUrl.model';
+import { shortUrlService } from '../../api/shorturl.service';
+import { createShortUrl } from '../../api/models/createShortUrl.model';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +9,14 @@ import { CreateShortUrl } from '../../api/models/CreateShortUrl.model';
   styleUrl: './home.component.scss'
 })
 
-
 export class HomeComponent {
+  createShortUrlDto: createShortUrl = {
+    originalUrl: '',
+    daysToExpiry: 7,
+  };
+}
+
+
+createShortUrl() {
 
 }
