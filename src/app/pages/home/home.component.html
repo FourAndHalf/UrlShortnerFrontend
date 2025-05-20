@@ -4,8 +4,8 @@
     <p>Effortlessly shorten URLs and share them with your audience.</p>
 
     <div class="url-shortener">
-      <input type="text" id="txtOriginalUrl" placeholder="Paste your long URL here" />
-      <button>Shorten URL</button>
+      <input [(ngModel)]="txtOriginalUrl" placeholder="Paste your long URL here" />
+      <button (click)="submitOriginalUrl()">Shorten URL</button>
     </div>
   </section>
 
