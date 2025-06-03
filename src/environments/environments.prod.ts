@@ -1,4 +1,3 @@
-ss
 export const environment = {
 
   production: true,

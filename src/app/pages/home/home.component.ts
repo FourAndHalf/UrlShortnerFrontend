@@ -18,7 +18,7 @@ export class HomeComponent {
   submitOriginalUrl() {
     const createShortUrlDto: createShortUrl = {
       originalUrl: this.txtOriginalUrl,
-      daysToExpiry: 7,
+      daysToExpiry: 30,
       shortenUrl: '',
       user: '',
       userType: ''
