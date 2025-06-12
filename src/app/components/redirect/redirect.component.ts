@@ -12,7 +12,7 @@ import { ApiResponse } from '../../api/models/helpers.model';
 })
 
 export class RedirectComponent implements OnInit {
-  constructor (private route: ActivatedRoute, private router: Router, private http: HttpClient, private shortUrlService pShortUrlService) {}
+  constructor(private route: ActivatedRoute, private router: Router, private http: HttpClient, private pShortUrlService: shortUrlService) { }
 
   ngOnInit(): void {
     const pShortCode = this.route.snapshot.paramMap.get('shortcode');
@@ -30,7 +30,7 @@ export class RedirectComponent implements OnInit {
             }
           },
           error: (err) => {
-            console.error('Api Error', response.message);
+            console.error('Api Error', err.message);
             // Implement error message
             this.router.navigateByUrl('/');
           }
